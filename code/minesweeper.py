@@ -15,15 +15,15 @@ pygame.event.set_allowed([pygame.KEYDOWN, pygame.MOUSEBUTTONDOWN])
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 
-img_background = pygame.image.load('CrackedMineSweeper/assets/images/background.png').convert()
-img_mine_flag_icon = pygame.image.load('CrackedMineSweeper/assets/images/mine_flag.png')
+img_background = pygame.image.load('../assets/images/background.png').convert()
+img_mine_flag_icon = pygame.image.load('../assets/images/mine_flag.png')
 img_mine_flag = pygame.transform.scale(img_mine_flag_icon, (CELL_WIDTH, CELL_HEIGHT)).convert_alpha()
-img_hidden_cell = pygame.transform.scale(pygame.image.load('CrackedMineSweeper/assets/images/hidden_cell.png'), (CELL_WIDTH, CELL_HEIGHT)).convert()
-img_mine = pygame.transform.scale(pygame.image.load('CrackedMineSweeper/assets/images/mine.png'), (CELL_WIDTH, CELL_HEIGHT)).convert_alpha()
-img_nums = [pygame.transform.scale(pygame.image.load(f'CrackedMineSweeper/assets/images/num_{i + 1}.png'), (CELL_WIDTH, CELL_HEIGHT)).convert_alpha() for i in range(8)]
+img_hidden_cell = pygame.transform.scale(pygame.image.load('../assets/images/hidden_cell.png'), (CELL_WIDTH, CELL_HEIGHT)).convert()
+img_mine = pygame.transform.scale(pygame.image.load('../assets/images/mine.png'), (CELL_WIDTH, CELL_HEIGHT)).convert_alpha()
+img_nums = [pygame.transform.scale(pygame.image.load(f'../assets/images/num_{i + 1}.png'), (CELL_WIDTH, CELL_HEIGHT)).convert_alpha() for i in range(8)]
 
-snd_mine = pygame.mixer.Sound('CrackedMineSweeper/assets/sounds/explosion.mp3')
-snd_win = pygame.mixer.Sound('CrackedMineSweeper/assets/sounds/win.mp3')
+snd_mine = pygame.mixer.Sound('../assets/sounds/explosion.mp3')
+snd_win = pygame.mixer.Sound('../assets/sounds/win.mp3')
 
 pygame.display.set_caption('MineSweeper')
 pygame.display.set_icon(img_mine_flag)
