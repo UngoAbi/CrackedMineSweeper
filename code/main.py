@@ -1,9 +1,9 @@
-from minesweeper import game
+import minesweeper
 
 
 def main():
     while True:
-        game()
+        minesweeper.game()
 
 
 if __name__ == '__main__':
