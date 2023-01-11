@@ -88,6 +88,6 @@ class Minefield:
 
     def all_cells_cleared(self) -> bool:
         for cell in [cell for row in self.matrix for cell in row]:
-            if cell.value != 'Mine' and not cell.is_visible:
+            if cell.value != -1 and not cell.is_visible:
                 return False
         return True
